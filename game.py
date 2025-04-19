@@ -20,7 +20,15 @@ class Game:
     
     def draw(self, screen):
         self.grid.draw(screen)
-        self.current_block.draw(screen)
+        self.current_block.draw(screen, 11, 11)
+
+        if self.next_block.id == 3:
+            self.next_block.draw(screen, 255, 290)
+        elif self.next_block.id == 4:
+            self.next_block.draw(screen, 255, 290)
+        else:
+            self.next_block.draw(screen, 270, 270)
+
 
     def move_left(self):
         self.current_block.move(0, -1)
